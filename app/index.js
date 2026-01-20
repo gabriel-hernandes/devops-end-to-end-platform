@@ -1,4 +1,5 @@
 const express = require ('express');
+const { version } = require('react');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -9,7 +10,7 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/version', (req, res) => {
-    res.json({versio : VERSION});
+    res.json({version : VERSION});
 });
 
 app.listen(PORT, () => {
